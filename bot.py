@@ -1,11 +1,11 @@
 import asyncio
-from aiogram import Bot, Dispatcher, F
+import config
+from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
-from aiogram.enums import ParseMode
 from aiogram.types import ChatMemberUpdated, ChatJoinRequest, Message
 from aiogram.filters import ChatMemberUpdatedFilter, IS_NOT_MEMBER, IS_MEMBER
 
-bot = Bot(token="")
+bot = Bot(token=config.token)
 dp = Dispatcher()
 
 @dp.message(Command("start"))
